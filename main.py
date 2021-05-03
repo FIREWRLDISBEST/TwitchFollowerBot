@@ -10,14 +10,14 @@ import ctypes
 import re
 import os
 
-token = 'ODM1NTQyNjU3MDY5NjEzMDU2.YIQ9vQ.OJiwLyoLJv8sAh0rfzOf5-UEtz4'
+token = 'YOUR DISCORD TOKEN'
 prefix = '/'
 
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=prefix, case_insensitive=True, intents=intents)
 bot.remove_command('help')
 
-administrators = ['486155844115759116','577093471379128330']
+administrators = ['OWNERID','OWNERID2']
 chat_channel = 826929216989167677
 bots_channel = 835276979574013952
 queue = []
