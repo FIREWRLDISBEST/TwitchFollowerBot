@@ -1,5 +1,5 @@
 # TwitchFollowerBot
-The original discord Twitch followerbot, leaked code, you're welcome :)
+The original discord Twitch followerbot, leaked code. You're welcome :)
 
 Support: https://discord.gg/ZxeavDHumA
 
