@@ -1,3 +1,4 @@
+import keep_alive
 from discord.ext import commands
 import subprocess
 import threading
@@ -9,6 +10,7 @@ import random
 import ctypes
 import re
 import os
+keep_alive.keep_alive()
 
 token = 'YOUR DISCORD TOKEN'
 prefix = '/'
