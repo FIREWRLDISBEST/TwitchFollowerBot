@@ -50,7 +50,7 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     channel = await bot.fetch_channel(bots_channel)
-    await channel.send(f'Welcome to **zoom**, {member.mention}.\nType `/help` to get started!')
+    await channel.send(f'Welcome to **zoom**, {member.mention}.\nType `/help` to get started! Support: https://discord.gg/ZxeavDHumA ')
 
 @bot.event
 async def on_command_error(ctx, error: Exception):
@@ -78,7 +78,7 @@ async def help(ctx):
     print(f'{ctx.author} | {ctx.author.id} -> /help')
     if ctx.channel.type != discord.ChannelType.private:
         embed = discord.Embed(color=16379747)
-        embed.add_field(name='Help', value='`/help`', inline=True)
+        embed.add_field(name='Help, https://discord.gg/ZxeavDHumA', value='`/help`', inline=True)
         embed.add_field(name='Open Ticket', value='`/ticket`', inline=True)
         embed.add_field(name='Close Ticket', value='`/close`', inline=True)
         embed.add_field(name='Tasks', value='`/tasks`', inline=True)
@@ -201,7 +201,7 @@ async def tfollow(ctx, channel, amount: int=None):
                             await asyncio.sleep(600)
                             tfollow_cooldown.remove(str(channel.lower()))
                 except:
-                    embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command!')
+                    embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command! Support: https://discord.gg/ZxeavDHumA')
                     await ctx.send(embed=embed)
                     tfollow.reset_cooldown(ctx)
         else:
@@ -230,7 +230,7 @@ async def tspam(ctx, channel, *, msg):
                         await ctx.send(embed=embed)
                         queue.insert(0, f'tspam-{channel}-{msg}')
                 except:
-                    embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command!')
+                    embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command! Support: https://discord.gg/ZxeavDHumA')
                     await ctx.send(embed=embed)
                     tspam.reset_cooldown(ctx)
             else:
@@ -282,7 +282,7 @@ async def rfollow(ctx, user_id, amount: int=None):
                             await asyncio.sleep(600)
                             rfollow_cooldown.remove(str(user_id))
                 except:
-                    embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command!')
+                    embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command! Support: https://discord.gg/ZxeavDHumA')
                     await ctx.send(embed=embed)
                     rfollow.reset_cooldown(ctx)
         else:
@@ -314,7 +314,7 @@ async def rget(ctx, asset_id):
                     except:
                         pass
             except:
-                embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command!')
+                embed = discord.Embed(color=16379747, description='An error has occured while attempting to run this command! Support: https://discord.gg/ZxeavDHumA')
                 await ctx.send(embed=embed)
         else:
             await ctx.message.delete()
