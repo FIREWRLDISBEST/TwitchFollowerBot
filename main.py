@@ -10,7 +10,7 @@ import random
 import ctypes
 import re
 import os
-from keep import keep
+import keep_alive
  
 token = 'add-a-token-here'
 prefix = '/'
@@ -332,5 +332,5 @@ async def trivia(ctx):
             await ctx.message.delete()
  
  
-keep()
+keep_alive.keep_alive()
 bot.run(token)
