@@ -12,7 +12,6 @@ import ssl
 import re
 import os
 
-ctypes.windll.kernel32.SetConsoleTitleW('zoom')
 token = ''
 prefix = '/'
 
