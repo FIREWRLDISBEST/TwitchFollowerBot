@@ -1,3 +1,4 @@
+import keep_alive
 from discord.ext import commands
 import threading
 import discord
@@ -571,5 +572,5 @@ async def rget(ctx, asset):
                 await ctx.send(embed=embed)
         else:
             await ctx.message.delete()
-
+keep_alive.keep_alive()
 bot.run(token)
